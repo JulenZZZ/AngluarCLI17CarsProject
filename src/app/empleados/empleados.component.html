@@ -5,10 +5,15 @@
 <button (click)="logColorSeleccionado()">Imprimir color</button>
 <input type="text" [(ngModel)]="color_seleccionado"/>
 <!-- ngStyle with attributes-->
-<pre [style.border]="color_seleccionado == 'red' ? '5px solid black' : '1px solid green'">
+<pre [style.border]="color_seleccionado == 'red' ? '5px solid black' : '1px solid green'"
+ [ngClass]="{
+    fondoAzul: color_seleccionado == 'blue',
+    fondoVerde: color_seleccionado == 'green',
+ }" > 
     <strong>Color elegido:</strong>
     {{color_seleccionado}}
 </pre>
+<!-- [class.fondoAzul]="color_seleccionado == 'blue'" -->
 <!-- ngStyle with directives -->
 <div [ngStyle]="{background:color_seleccionado, 'width': '200px', 'heigth':'300px',
 'float':'right', 'margin-right':'69%', 'padding':'40px'}"></div>

@@ -1,3 +1,23 @@
 <h3>{{title}}</h3>
+<hr>
+<nav>
+    <a [routerLink]="['/pagina-principal']">
+        Home
+    </a>
+    -
+    <a [routerLink]="['/fruta']">
+        Fruta
+    </a>
+    -
+    <a [routerLink]="['/empleado']">
+        Empleado
+    </a>
+    -
+    <a [routerLink]="['/contact']">
+        Contact
+    </a>
+</nav>
+<hr>
 <!-- <app-fruta></app-fruta> -->
-<empleado-tag></empleado-tag>
+<!-- <empleado-tag></empleado-tag> -->
+<router-outlet></router-outlet>
