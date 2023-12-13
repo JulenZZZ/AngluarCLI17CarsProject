@@ -13,6 +13,7 @@ export const appRoutes: Routes = [
     {path: 'fruta',  component: FrutaComponentComponent},
     {path: 'pagina-principal',  component: HomeComponent},
     {path: 'contact',  component: ContactComponent},
+    {path: 'contact/:page',  component: ContactComponent},
     {path: '**',  component: ContactComponent}
 ];
 export const appRoutingProviders: any[] = [];
