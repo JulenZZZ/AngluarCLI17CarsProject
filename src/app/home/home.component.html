@@ -1,1 +1,13 @@
 <h3>{{titulo}}</h3>
+<br/>
+<input type="text" [(ngModel)]="ropa_a_anadir"><button (click)="anadirRopa()">Anadir prenda</button>
+<br/>
+<p *ngIf="ropa_a_anadir">Ropa a anadir: <strong>{{ropa_a_anadir}}</strong></p>
+
+<h3>Listado de ropa:</h3>
+ <ul>
+    <li *ngFor="let prenda of listado_ropa; let i = index">
+        {{prenda}}
+        <button (click)="eliminarRopa(i)">Eliminar</button>
+    </li>
+ </ul>
