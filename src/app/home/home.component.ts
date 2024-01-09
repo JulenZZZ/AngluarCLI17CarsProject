@@ -2,23 +2,28 @@ import { Component } from '@angular/core';
 import { RopaService } from '../services/ropa.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule  } from "@angular/forms";
+import { ConversorPipe } from "../pipes/conversor.pipe";
 
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [CommonModule,FormsModule],
-  templateUrl: './home.component.html',
-  providers: [RopaService]
+    selector: 'app-home',
+    standalone: true,
+    templateUrl: './home.component.html',
+    providers: [RopaService],
+    imports: [CommonModule, FormsModule, ConversorPipe]
 })
+
 export class HomeComponent {
   public titulo='Pagina Home';
   public listado_ropa: Array<string> = [];
   public ropa_a_anadir: any;
+  public fecha;
+  public nombre = 'Juan ALbertO';
+
   constructor(
     private _ropaService: RopaService
   ){
-    
+    this.fecha = new Date(2024, 0, 9);
 
   }
 

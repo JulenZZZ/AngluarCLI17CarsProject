@@ -6,14 +6,14 @@ import { EmpleadosComponent } from './empleados/empleados.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { FormsModule, ReactiveFormsModule  } from "@angular/forms";
-
+import { ConversorPipe } from './pipes/conversor.pipe';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule, RouterOutlet,RouterModule, FrutaComponentComponent, EmpleadosComponent,FormsModule,ReactiveFormsModule,HomeComponent,
-  ContactComponent],
+  ContactComponent, ConversorPipe],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

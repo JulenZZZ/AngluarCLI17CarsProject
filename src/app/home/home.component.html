@@ -1,5 +1,11 @@
 <h3>{{titulo}}</h3>
 <br/>
+{{fecha| date:'dd/MM/yyyy'}} -
+{{fecha| date:'fullDate' | lowercase}} -
+{{nombre| uppercase}} - 
+<!-- Use ConversorPipe sending two parameters -->
+{{5| conversor: 7}}
+<br/>
 <input type="text" [(ngModel)]="ropa_a_anadir"><button (click)="anadirRopa()">Anadir prenda</button>
 <br/>
 <p *ngIf="ropa_a_anadir">Ropa a anadir: <strong>{{ropa_a_anadir}}</strong></p>
