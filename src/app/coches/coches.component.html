@@ -55,3 +55,13 @@ input[type="text"], span{
         </li>
     </ul>
 </div>
+<div class="listado">
+    <h4>Listado de articulos</h4>
+    <ul *ngIf="articulos">
+        <li *ngFor="let articulo of articulos">
+        {{articulo.id}} -
+        {{articulo.title}}
+        </li>
+    </ul>
+    <span *ngIf="!articulos">Cargando listado...</span>
+</div>

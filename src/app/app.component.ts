@@ -8,12 +8,13 @@ import { ContactComponent } from './contact/contact.component';
 import { FormsModule, ReactiveFormsModule  } from "@angular/forms";
 import { ConversorPipe } from './pipes/conversor.pipe';
 import { CochesComponent } from './coches/coches.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule, RouterOutlet,RouterModule, FrutaComponentComponent, EmpleadosComponent,FormsModule,ReactiveFormsModule,HomeComponent,
-  ContactComponent, ConversorPipe, CochesComponent],
+  ContactComponent, ConversorPipe, CochesComponent,HttpClientModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
